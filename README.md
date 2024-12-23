@@ -7,7 +7,7 @@ Welcome to Unicode-Shortcuts!!
 "\moneysmiles" -> 🤑  
 and many more fun character mappings.
 
-Building-
+Building
 
 To build this project on a 64-bit machine with Windows 10,
 1. Ensure msbuild is installed, available with the Windows SDK.
