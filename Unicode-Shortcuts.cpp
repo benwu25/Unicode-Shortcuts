@@ -261,7 +261,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 
             // \cdot
-            names.insert(names.end(), { BACKSLASH, D_KEY, O_KEY, T_KEY, '\0' });
+            names.insert(names.end(), { BACKSLASH, D_KEY, O_KEY, T_KEY, END });
             possibStreak.b |= processSmall(ref, 0x2981, arr_size(ref));
             names.clear();
 
@@ -285,34 +285,28 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
             possibStreak.b |= processLarge(ref, 0x1D6FE, arr_size(ref));
             names.clear();
 
+            // heart
+            names.insert(names.end(), { BACKSLASH, H_KEY, E_KEY, A_KEY, R_KEY, T_KEY, END });
+            possibStreak.b |= processLarge(ref, 0x1F493, arr_size(ref));
+            names.clear();
+
 
 
             USHORT moneysmile[] = { BACKSLASH, M_KEY, O_KEY, N_KEY, E_KEY, Y_KEY, S_KEY, M_KEY, I_KEY, L_KEY, E_KEY, S_KEY, END };
-            possibStreak.b |= processLarge(moneysmile, 0x1F911, arr_size(moneysmile));
-            /*WORD surrogates3[2];
-            makeSurrogates((WORD*)surrogates3, (UINT)0x1F911);
-            result = checkEqual((USHORT*)moneysmile);
-            if (result == 1) {
-                sendInputLarge((WORD*)surrogates3, 12);
-            }
-            else if (result == 2) {
-                possibStreak = 1;
-            }*/
+            names.insert(names.end(), { BACKSLASH, M_KEY, O_KEY, N_KEY, E_KEY, Y_KEY, S_KEY, M_KEY, I_KEY, L_KEY, E_KEY, S_KEY, END  });
+            possibStreak.b |= processLarge(ref, 0x1F911, arr_size(ref));
+            names.clear();
 
             USHORT nerdglasses[] = { BACKSLASH, N_KEY, E_KEY, R_KEY, D_KEY, END };
-            possibStreak.b |= processLarge(nerdglasses, 0x1F913, arr_size(nerdglasses));
-            /*WORD surrogates4[2];
-            makeSurrogates((WORD*)surrogates4, (UINT)0x1F913);
-            result = checkEqual((USHORT*)nerdglasses);
-            if (result == 1) {
-                sendInputLarge((WORD*)surrogates4, 5);
-            }
-            else if (result == 2) {
-                possibStreak = 1;
-            }*/
+            names.insert(names.end(), { BACKSLASH, N_KEY, E_KEY, R_KEY, D_KEY, END });
+            possibStreak.b |= processLarge(ref, 0x1F913, arr_size(ref));
+            names.clear();
 
-            USHORT questionman[] = { BACKSLASH, Q_KEY, U_KEY, E_KEY, S_KEY, T_KEY, I_KEY, O_KEY, N_KEY, M_KEY, A_KEY, N_KEY, END };
-            possibStreak.b |= processLarge(questionman, 0x1F9D0, arr_size(questionman));
+            names.insert(names.end(), { BACKSLASH, Q_KEY, U_KEY, E_KEY, S_KEY, T_KEY, I_KEY, O_KEY, N_KEY, M_KEY, A_KEY, N_KEY, END });
+            possibStreak.b |= processLarge(ref, 0x1F9D0, arr_size(ref));
+            names.clear();
+            // USHORT questionman[] = { BACKSLASH, Q_KEY, U_KEY, E_KEY, S_KEY, T_KEY, I_KEY, O_KEY, N_KEY, M_KEY, A_KEY, N_KEY, END };
+            // possibStreak.b |= processLarge(questionman, 0x1F9D0, arr_size(questionman));
             /*WORD surrogates5[2];
             makeSurrogates((WORD*)surrogates5, (UINT)0x1F9D0);
             result = checkEqual((USHORT*)questionman);
@@ -584,7 +578,6 @@ void sendInputLarge(WORD* surrogates, int keySize) {
     }
     SendInput(1, backslash, sizeof(INPUT));
     SendInput(4, puts, sizeof(INPUT));
-    //chars.clear(); i think we clear it back in WIndowProc anyway
 }
 
 // call by possibStreak = processSmall(arr, code, keySize);
