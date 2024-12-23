@@ -1,10 +1,10 @@
 Welcome to Unicode-Shortcuts!!
 
-"\heart" -> 💓
-"\questionman" -> 🧐
-"\nabla" -> ∇
-"\nerd" -> 🤓
-"\moneysmiles" -> 🤑
+"\heart" -> 💓,
+"\questionman" -> 🧐,
+"\nabla" -> ∇,
+"\nerd" -> 🤓,
+"\moneysmiles" -> 🤑,
 and many more fun character mappings.
 
 Building
