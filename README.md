@@ -1,10 +1,10 @@
 Welcome to Unicode-Shortcuts!!
 
-"\heart" -> 💓,
-"\questionman" -> 🧐,
-"\nabla" -> ∇,
-"\nerd" -> 🤓,
-"\moneysmiles" -> 🤑,
+"\heart" -> 💓  
+"\questionman" -> 🧐  
+"\nabla" -> ∇  
+"\nerd" -> 🤓  
+"\moneysmiles" -> 🤑  
 and many more fun character mappings.
 
 Building
@@ -16,5 +16,5 @@ To build this project on a 64-bit machine with Windows 10,
 4. To run the program, the executable is stored in "Unicode-Shortcuts\x64\Debug"
 
 Notes:
-Currently, it is only possible to hard-code string -> Unicode mappings in the source file Unicode-Shortcuts.cpp.
-I am hoping to add a feature allowing new mappings to be added and stored in the Window.
+Currently, it is only possible to hard-code string -> Unicode mappings in the source file  
+Unicode-Shortcuts.cpp. I am hoping to add a feature allowing new mappings to be added and stored in the Window.
