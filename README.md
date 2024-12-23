@@ -12,6 +12,6 @@ To build this project on a 64-bit machine with Windows 10,
 3. Execute the command "msbuild Unicode-Shortcuts\Unicode-Shortcuts.sln"
 4. To enable character mappings, the application is stored in "Unicode-Shortcuts\x64\Debug"!
 
-Notes:
+<b>Notes:</b>  
 Currently, it is only possible to hard-code string -> Unicode mappings in the source file  
 Unicode-Shortcuts.cpp. I am hoping to add a feature allowing new mappings to be added and stored in the Window.
