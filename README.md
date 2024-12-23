@@ -7,8 +7,6 @@ Welcome to Unicode-Shortcuts!!
 "\moneysmiles" -> 🤑  
 and many more fun character mappings.
 
-Building
-
 To build this project on a 64-bit machine with Windows 10,
 1. Ensure msbuild is installed, available with the Windows SDK.
 2. Clone this repository: "git clone https://github.com/benwu25/Unicode-Shortcuts"
