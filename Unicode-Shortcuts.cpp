@@ -285,9 +285,29 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
             possibStreak.b |= processLarge(ref, 0x1D6FE, arr_size(ref));
             names.clear();
 
+            // check
+            names.insert(names.end(), { BACKSLASH, C_KEY, H_KEY, E_KEY, C_KEY, K_KEY, END});
+            possibStreak.b |= processSmall(ref, 0x2714, arr_size(ref));
+            names.clear();
+
+            // Capital theta
+            names.insert(names.end(), { BACKSLASH, C_KEY, T_KEY, H_KEY, E_KEY, T_KEY, A_KEY, END });
+            possibStreak.b |= processSmall(ref, 0x0398, arr_size(ref));
+            names.clear();
+
+            // Capital omega
+            names.insert(names.end(), { BACKSLASH, C_KEY, O_KEY, M_KEY, E_KEY, G_KEY, A_KEY, END });
+            possibStreak.b |= processSmall(ref, 0x03A9, arr_size(ref));
+            names.clear();
+
+            // lower omega
+            names.insert(names.end(), { BACKSLASH, O_KEY, M_KEY, E_KEY, G_KEY, A_KEY, END });
+            possibStreak.b |= processSmall(ref, 0x03C9, arr_size(ref));
+            names.clear();
+
             // heart
             names.insert(names.end(), { BACKSLASH, H_KEY, E_KEY, A_KEY, R_KEY, T_KEY, END });
-            possibStreak.b |= processLarge(ref, 0x1F493, arr_size(ref));
+            possibStreak.b |= processSmall(ref, 0x2665, arr_size(ref));
             names.clear();
 
 
@@ -305,6 +325,12 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
             names.insert(names.end(), { BACKSLASH, Q_KEY, U_KEY, E_KEY, S_KEY, T_KEY, I_KEY, O_KEY, N_KEY, M_KEY, A_KEY, N_KEY, END });
             possibStreak.b |= processLarge(ref, 0x1F9D0, arr_size(ref));
             names.clear();
+
+
+
+
+
+
             // USHORT questionman[] = { BACKSLASH, Q_KEY, U_KEY, E_KEY, S_KEY, T_KEY, I_KEY, O_KEY, N_KEY, M_KEY, A_KEY, N_KEY, END };
             // possibStreak.b |= processLarge(questionman, 0x1F9D0, arr_size(questionman));
             /*WORD surrogates5[2];
